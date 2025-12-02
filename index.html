@@ -17,10 +17,10 @@
         <meta property="og:image" content="C:\Users\jorge\Documents\Hot Seat\HSTransparentLogo.png">
         <meta property="og:url" content="https://hotseatticketing.com/">
 
-        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
-    <body>
+    <body class="cms-body">
         <!--Top Bar-->
         <div class="top-bar">
             <div class="spacer"></div>
@@ -41,7 +41,7 @@
         <header class="site-header">
             <!--Nav Bar Logo-->
             <a href="index.html" class="logo">
-                <img src="ProvingGrounds.PNG" alt="Proving Grounds Logo">
+                <img src="PGeverywhereTransparent.png" alt="Proving Grounds Logo">
             </a>
             <!--Mobile Hamburger Icon-->
             <button class="hamburger" aria-label="Menu"$#>
@@ -51,116 +51,94 @@
             <div class="burger-nav">
                 <nav class="main-nav">
                     <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="cms.html">CMS</a>
+                    <a href="store.html">Store</a>
                     <a href="form.html" id="form">Media Day Vendor</a>
                 </nav>
             </div>
         </header>
 
-        <!--About Us-->
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="social-media-concept-with-device.jpg" alt="social media pic">
-                </div>
-                <div class="about-text">
-                    <h2>We're Not Just Posting — We're Strategizing</h2>
-                    <p>
-                        At The Proving Grounds, we know that social media isn't just about pretty pictures. 
-                        It's about building relationships, telling your story, and driving real results. Our 
-                        team blends creative storytelling with data-backed strategies so your brand stands 
-                        out in a crowded feed.
-                    </p>
-                    <ul>
-                        <li>Tailored strategies for your unique brand voice</li>
-                        <li>Content designed to convert, not just get likes</li>
-                        <li>Transparent reporting so you know exactly what's working</li>
-                        <li>A personal, hands-on approach</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="about-subheader">Our Services</h2>
-                    <div class="how-it-works">
-                        <div class="how-item">
-                            <h3>Social Media Strategy & Management</h3>
-                            <p>We plan, create, and manage your social 
-                                presence so you can focus on running your business.
-                            </p>
-                        </div>
-                        <div class="how-item">
-                            <h3>Content Creation</h3>
-                            <p>Eye-catching photos, videos, reels, and graphics 
-                                tailored to your brand.
-                            </p>
-                        </div>
-                        <div class="how-item">
-                            <h3>Paid Social Advertising</h3>
-                            <p>Targeted campaigns to drive awareness, engagement, 
-                                and sales.
-                            </p>
-                        </div>
-                        <div class="how-item">
-                            <h3>Analytics & Reporting</h3>
-                            <p>Monthly reports with actionable insights so you can see your ROI.
-                            </p>
-                        </div>
-                        <p class="how-final-note">We help ambitious businesses turn social media 
-                            followers into loyal customers through strategy-driven marketing, 
-                            creative content, and measurable results.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!--------------CMS Content-------------->
+  <div class="container">
 
-        <!--Footer-->
-        <footer class="custom-footer">
-            <!--Footer Top-->
-            <div class="footer-line1">
-                <div class="footer-logo">
-                    <img src="ProvingGrounds.PNG" alt="Proving Grounds Logo">
-                </div>
-                <div class="footer-social">
-                    <h2>Follow us on social media</h2>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/hotseattickets" target="_blank" aria-label="facebook">
-                            <img src="facebook.svg" alt="facebook">
-                        </a>
-                        <a href="https://www.instagram.com/hotseat_tickets/" target="_blank" aria-label="instagram">
-                            <img src="instagram.svg" alt="instagram">
-                        </a>
-                        <a href="https://x.com/hotseatticket?s=11&t=4fxrVmdDy675gcae34tD0Q" target="_blank" aria-label="x-icon">
-                            <img src="twitter.svg" alt="x-icon">
-                        </a>
-                        <a href="https://x.com/hotseatticket?s=11&t=4fxrVmdDy675gcae34tD0Q" target="_blank" aria-label="linkedin">
-                            <img src="linkedin.svg" alt="linkedin">
-                        </a>
-                        <a href="https://www.youtube.com/@Hotseat_tickets" target="_blank" aria-label="youtube">
-                            <img src="youtube.svg" alt="youtube">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!--Footer Bottom-->
-            <div class="footer-line2">
-                <div class="footer-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <span class="divider"></span>
-                    <a href="terms.html">Terms of Service</a>
-                </div>
-                <div class="footer-copy">
-                    &copy; 2025 The Proving Grounds, LLC. - All rights reserved.
-                </div>
-            </div>
-        </footer>
-        <script>
-            const hamburger = document.querySelector('.hamburger');
-            const burgernav = document.querySelector('.burger-nav');
+    <div class="header">
+      <div>
+        <h1>Store Admin</h1>
+        <div class="muted">Add, edit, and manage products (localStorage)</div>
+      </div>
+      <div>
+        <button id="newProductBtn" class="btn">+ New Product</button>
+        <a href="store.html" class="btn ghost" style="margin-left:8px">View Store</a>
+      </div>
+    </div>
 
-            hamburger.addEventListener('click', () => {
-                burgernav.classList.toggle('active');
-            });
-        </script>
-    </body>
+    <div class="admin-grid">
+      <!-- left: product list -->
+      <div>
+        <div class="card">
+          <h3 style="margin-top:0">Products</h3>
+          <div id="adminProducts"></div>
+        </div>
+      </div>
+
+      <!-- right: form + image manager -->
+      <div>
+        <div class="card">
+          <h3 style="margin-top:0">Product Editor</h3>
+
+          <form id="productForm">
+            <input type="hidden" id="prodId">
+
+            <div class="field">
+              <label>Product Name</label>
+              <input id="name" type="text" placeholder="e.g. Desert Gold T-Shirt">
+            </div>
+
+            <div class="field">
+              <label>Description</label>
+              <textarea id="description" placeholder="Product description"></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col field">
+                <label>Price (USD)</label>
+                <input id="price" type="number" step="0.01" value="0.00">
+              </div>
+              <div class="col field">
+                <label>Type</label>
+                <select id="type">
+                  <option value="non-apparel">Non-Apparel</option>
+                  <option value="apparel">Apparel</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="sizesWrapper" style="display:block">
+              <label>Inventory by size</label>
+              <div class="sizes">
+                <input id="size-S" type="number" value="0" min="0" placeholder="S">
+                <input id="size-M" type="number" value="0" min="0" placeholder="M">
+                <input id="size-L" type="number" value="0" min="0" placeholder="L">
+                <input id="size-XL" type="number" value="0" min="0" placeholder="XL">
+                <input id="size-XXL" type="number" value="0" min="0" placeholder="XXL">
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn">Save Product</button>
+              <button type="button" id="deleteProductBtn" class="btn ghost">Delete Product</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="imageManager" class="card" style="margin-top:12px">
+          <!-- image manager injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
+
