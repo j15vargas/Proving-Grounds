@@ -139,7 +139,6 @@
           </p>
         </div>
       </div>
-  </div>
   <div class="footer-line1">
                 <div class="footer-logo-section">
                       <!-- STEP 6: Logo -->
@@ -194,19 +193,41 @@
             // ===== HAMBURGER MENU TOGGLE =====
             const menuToggle = document.querySelector('.menu-toggle');
             const navMenu = document.querySelector('.nav-links');
+            const nav = document.querySelector('.nav');
+            const hero = document.querySelector('.hero');
 
-            menuToggle.addEventListener('click', () => {
-                menuToggle.classList.toggle('active');
-                navMenu.classList.toggle('open');
-            });
+            // Debug: Check if elements exist
+            console.log('menuToggle:', menuToggle);
+            console.log('navMenu:', navMenu);
+            console.log('nav:', nav);
+            console.log('hero:', hero);
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('open');
+                });
+            }
 
             // ===== CLOSE MENU WHEN LINK CLICKED (on mobile) =====
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
-                    menuToggle.classList.remove('active');
-                    navMenu.classList.remove('open');
+                    if (menuToggle) menuToggle.classList.remove('active');
+                    if (navMenu) navMenu.classList.remove('open');
                 });
             });
+
+            // ===== ADD BACKGROUND TO NAV WHEN SCROLLING PAST HERO =====
+            if (hero && nav) {
+                window.addEventListener('scroll', () => {
+                    const heroBottom = hero.offsetTop + hero.offsetHeight;
+                    if (window.scrollY > heroBottom) {
+                        nav.classList.add('scrolled');
+                    } else {
+                        nav.classList.remove('scrolled');
+                    }
+                });
+            }
 
             // ===== SMOOTH SCROLL TO SECTIONS =====
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -21,13 +21,18 @@ body {
 .nav {
   position: fixed;
   top: 0;
-  /*background-color: #000;*/
+  background-color: transparent;
   width: 100%;
   padding: 0px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .nav-logo {
@@ -63,8 +68,10 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 10px;
   gap: 5px;
+  width: auto;
+  height: auto;
 }
 
 .menu-toggle .bar {
@@ -73,6 +80,8 @@ body {
   background-color: #fff;
   border-radius: 2px;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  z-index: 200;
 }
 
 .menu-toggle.active .bar:nth-child(1) {
@@ -492,6 +501,17 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .nav {
+    padding: 0px 8px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .nav-left {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
   .nav-links {
     position: absolute;
     top: 90px;
@@ -521,12 +541,27 @@ body {
   }
 
   .menu-toggle {
-    display: flex;
-    position: absolute;
-    right: 10%; /* moves hamburger */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 200;
+    display: flex !important;
+    visibility: visible !important;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    z-index: 201;
+    background-color: red;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .menu-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
 }
 
