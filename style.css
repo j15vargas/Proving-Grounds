@@ -145,7 +145,7 @@ body {
 
   max-width: 560px;   /* tighter column */
   margin-left: 6rem;
-  padding-top: 30vh;
+  padding-top: 10vh;
 
   color: white;
 }
@@ -384,10 +384,7 @@ body {
     flex-wrap: wrap;
 
 }
-/*.footer-logo img {
-    width: 180px;  
-    filter: invert(100%); /* 🔥 Invert logo colors 
-}*/
+
 .footer-social h2 {
     color: black;
     text-decoration: underline;
@@ -568,7 +565,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 0 1rem;
-    padding-top: 15vh;
+    padding-top: 8vh;
     max-width: 100%;
   }
 
@@ -674,8 +671,8 @@ body {
   }
 
   .level-recommend img {
-    width: 100%;
-    padding-top: 2rem;
+    width: 150%;
+    padding-top: 1.5rem;
   }
 
   /* Footer */
