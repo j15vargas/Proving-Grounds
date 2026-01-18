@@ -21,13 +21,15 @@ body {
 .nav {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: transparent;
   width: 100%;
   padding: 0px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
   transition: background-color 0.3s ease;
 }
 
@@ -81,7 +83,7 @@ body {
   border-radius: 2px;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
-  z-index: 200;
+  z-index: auto;
 }
 
 .menu-toggle.active .bar:nth-child(1) {
@@ -124,6 +126,12 @@ body {
   max-width: none;
 }
 
+.hero,
+.hero * {
+  pointer-events: none;
+}
+
+
 .hero-image {
   position: absolute;
   inset: 0;
@@ -147,16 +155,14 @@ body {
 .hero-content {
   position: relative;
   z-index: 3;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   max-width: 560px;   /* tighter column */
   margin-left: 6rem;
   padding-top: 10vh;
-
   color: white;
+  pointer-events: auto;
 }
 
 /* Normalize vertical rhythm */
@@ -500,7 +506,7 @@ body {
 
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .nav {
     padding: 0px 8px;
     justify-content: flex-start;
@@ -510,6 +516,11 @@ body {
   .nav-left {
     margin-left: 0;
     flex-shrink: 0;
+    margin-right: auto;
+  }
+
+  .nav-logo {
+    margin-right: 20px;
   }
 
   .nav-links {
@@ -541,11 +552,12 @@ body {
   }
 
   .menu-toggle {
-    display: flex !important;
-    visibility: visible !important;
+    display: flex;
+    visibility: visible;
     flex-direction: column;
     gap: 5px;
-    margin-left: auto;
+    margin-left: 10px;
+    margin-right: 0;
     z-index: 201;
     background-color: red;
     padding: 10px;
@@ -567,7 +579,7 @@ body {
 
 @media (max-width: 768px) {
   /* Navigation */
-  .nav {
+ /* .nav {
     padding: 0px 8px;
   }
 
@@ -577,7 +589,7 @@ body {
 
   .nav-links {
     gap: 15px;
-  }
+  }*/
 
   .cta {
     padding: 8px 16px;
