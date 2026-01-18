@@ -1,144 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proving Grounds - Social Media Marketing</title>
-        <link rel="icon" type="image/x-icon" href="ProvingGrounds.PNG">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proving Grounds</title>
 
-        <!--SEO Tags-->
-        <meta name="description" content="Hot Seat Ticketing Services offers powerful Online Ticketing and custom website development for schools and businesses big or small. Such services include school events, events, concerts, festivals, and more. Easily manage ticket sales, scan entries, and build a professional web presence-all in one place.">
-        <meta name="keywords" content="online ticketing, school events, events, concerts, sports tickets, football tickets, basketball tickets, soccer tickets, volleyball tickets, flag football tickets, baseball tickets, softball tickets, homecoming tickets, prom tickets, fine arts tickets, dance tickets,online ticketing solutions, website creation, website developers, website development, manage sales">
-        <meta name="author" content="Hot Seat Ticketing">
+  <!-- Google Font (Serif style similar to screenshot) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-        <!--Social sharing-->
-        <meta property="og:title" content="Proving Grounds - Social Media Marketing">
-        <meta property="og:description" content="We handle ticketing for school events, concerts, festivals, and more.">
-        <meta property="og:image" content="C:\Users\jorge\Documents\Hot Seat\HSTransparentLogo.png">
-        <meta property="og:url" content="https://hotseatticketing.com/">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-        <link rel="stylesheet" href="style.css">
-
-    </head>
-    <body class="cms-body">
-        <!--Top Bar-->
-        <div class="top-bar">
-            <div class="spacer"></div>
-            <div class="contact-info">
-                <a href="tel:+9152565774" class="contact-link">
-                    <img src="phone icon.svg" alt="Phone Icon" class="icon">
-                    <span>(915) 256-5774</span>
-                </a>
-                <span class="divider"></span>
-                <a href="mailto:theprovinggrounds.bm@gmail.com" class="contact-link">
-                    <img src="email icon.svg" alt="Email Icon" class="icon">
-                    <span>theprovinggrounds.bm@gmail.com</span>
-                </a>
-            </div>
-        </div>
-
-        <!--Main Header-->
-        <header class="site-header">
-            <!--Nav Bar Logo-->
-            <a href="index.html" class="logo">
-                <img src="PGeverywhereTransparent.png" alt="Proving Grounds Logo">
-            </a>
-            <!--Mobile Hamburger Icon-->
-            <button class="hamburger" aria-label="Menu"$#>
-                &#9776;
-            </button>
-            <!--Nav Links-->
-            <div class="burger-nav">
-                <nav class="main-nav">
-                    <a href="index.html">Home</a>
-                    <a href="cms.html">CMS</a>
-                    <a href="store.html">Store</a>
-                    <a href="form.html" id="form">Media Day Vendor</a>
-                </nav>
-            </div>
-        </header>
-
-        <!--------------CMS Content-------------->
-  <div class="container">
-
-    <div class="header">
-      <div>
-        <h1>Store Admin</h1>
-        <div class="muted">Add, edit, and manage products (localStorage)</div>
-      </div>
-      <div>
-        <button id="newProductBtn" class="btn">+ New Product</button>
-        <a href="store.html" class="btn ghost" style="margin-left:8px">View Store</a>
-      </div>
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="nav-left">
+    <img src="PGeverywhereTransparent.png" alt="Proving Grounds Logo" class="nav-logo" />
     </div>
 
-    <div class="admin-grid">
-      <!-- left: product list -->
-      <div>
-        <div class="card">
-          <h3 style="margin-top:0">Products</h3>
-          <div id="adminProducts"></div>
-        </div>
-      </div>
 
-      <!-- right: form + image manager -->
-      <div>
-        <div class="card">
-          <h3 style="margin-top:0">Product Editor</h3>
+    <nav class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#">Shop</a>
+      <button class="cta">Book now</button>
+    </nav>
+  </header>
 
-          <form id="productForm">
-            <input type="hidden" id="prodId">
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="heropg.jpg"
+      alt="Hero background"
+      class="hero-image"
+    />
 
-            <div class="field">
-              <label>Product Name</label>
-              <input id="name" type="text" placeholder="e.g. Desert Gold T-Shirt">
-            </div>
+    <div class="overlay"></div>
 
-            <div class="field">
-              <label>Description</label>
-              <textarea id="description" placeholder="Product description"></textarea>
-            </div>
+    <div class="hero-content">
+      <h1>Where Brands Get Stronger.</h1>
 
-            <div class="row">
-              <div class="col field">
-                <label>Price (USD)</label>
-                <input id="price" type="number" step="0.01" value="0.00">
-              </div>
-              <div class="col field">
-                <label>Type</label>
-                <select id="type">
-                  <option value="non-apparel">Non-Apparel</option>
-                  <option value="apparel">Apparel</option>
-                </select>
-              </div>
-            </div>
+      <p class="hero-sub">
+        Marketing doesn't fail because of effort.<br />
+        It fails because of lack of structure.
+      </p>
 
-            <div id="sizesWrapper" style="display:block">
-              <label>Inventory by size</label>
-              <div class="sizes">
-                <input id="size-S" type="number" value="0" min="0" placeholder="S">
-                <input id="size-M" type="number" value="0" min="0" placeholder="M">
-                <input id="size-L" type="number" value="0" min="0" placeholder="L">
-                <input id="size-XL" type="number" value="0" min="0" placeholder="XL">
-                <input id="size-XXL" type="number" value="0" min="0" placeholder="XXL">
-              </div>
-            </div>
-
-            <div class="actions">
-              <button type="submit" class="btn">Save Product</button>
-              <button type="button" id="deleteProductBtn" class="btn ghost">Delete Product</button>
-            </div>
-          </form>
-        </div>
-
-        <div id="imageManager" class="card" style="margin-top:12px">
-          <!-- image manager injected here -->
-        </div>
-      </div>
+      <p class="hero-desc">
+        Proving Grounds is where business owners build clarity,
+        momentum, and authority—through training, discipline,
+        and execution.
+      </p>
     </div>
+    <!-- SVG curve mask -->
+    <svg
+      class="hero-curve"
+      viewBox="0 0 1440 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,0 
+        C240,30 480,45 720,45 
+        960,45 1200,30 1440,0 
+        L1440,120 L0,120 Z"
+        fill="#ffffff"
+      />
+    </svg>
+  </section>
+
+  <div class="info">
+    <h1>This Isn't Marketing</h1>
+    <p>This is training.</p>
+    <p>We work with business owners who understand that perception is leverage.</p>
+    <p>If you're ready to stop experimenting and start building a brand that commands respect, you're in the right place.</p>
   </div>
 
-  <script src="script.js"></script>
+
+    <div class="training-header">
+      <h1>Choose Your Training Level</h1>
+      <p>We don't sell packages. We run training blocks for brans.</p>
+    </div>
+    <div class="training-levels">
+      <h2>ENTRY - CLARITY & DIRECTION</h2>
+      <h2>CORE - MOMENTUM & AUTHORITY</h2>
+      <h2>ELITE - DOMINATION & POSITIONING</h2>
+    </div>
+    <div class="level-recommend">
+      <h1>Not sure where you fit?</h1>
+      <h2>Our qualification process will recommend the right training level for you.</h2>
+      
+      <button class="cta-qualify">Qualify</button>
+      <p>If its a good fit, we will contact you to schedule a call. This is not a sales call. 
+        It's a short alignment session to determing your training level.</p>
+      <img 
+        src="home_pic.png" 
+        alt="Man at desk"
+        class="home-image"
+      >
+    </div>
+    <!-- STEP 1: Footer Wrapper -->
+    <footer class="footer">
+      <div class="footer-container">
+
+        <!-- STEP 2: Left Column (Brand + Tagline) -->
+        <div class="footer-brand">
+          <h1 class="footer-title">PROVING GROUNDS</h1>
+          <p class="footer-tagline">
+            Training day is every day. Growth is better when we raise others.
+          </p>
+        </div>
+
+        <!-- STEP 3: Middle Column (Location) -->
+        <div class="footer-location">
+          <h3>Location</h3>
+          <p>
+            5845 Cromo Dr #1,<br />
+            El Paso, TX<br />
+            79912
+          </p>
+        </div>
+
+        <!-- STEP 4: Right Column (Contact) -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <a href="mailto:BobbyMacias@provinggroundsHQ.com">
+              BobbyMacias@provinggroundsHQ.com
+            </a>
+          </p>
+          <p>
+            <a href="tel:19152565774">(915) 256-5774</a>
+          </p>
+        </div>
+      </div>
+  </div>
+  <div class="footer-line1">
+                <div class="footer-logo-section">
+                      <!-- STEP 6: Logo -->
+    <img
+      src="ProvingGrounds.PNG"
+      alt="Proving Grounds Logo"
+      class="footer-logo"
+    />
+                </div>
+                <div class="footer-social">
+                    <h2>Follow us on social media</h2>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/hotseattickets" target="_blank" aria-label="facebook">
+                            <img src="facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.instagram.com/hotseat_tickets/" target="_blank" aria-label="instagram">
+                            <img src="instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://x.com/hotseatticket?s=11&t=4fxrVmdDy675gcae34tD0Q" target="_blank" aria-label="x-icon">
+                            <img src="twitter.svg" alt="x-icon">
+                        </a>
+                        <a href="https://x.com/hotseatticket?s=11&t=4fxrVmdDy675gcae34tD0Q" target="_blank" aria-label="linkedin">
+                            <img src="linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="https://www.youtube.com/@Hotseat_tickets" target="_blank" aria-label="youtube">
+                            <img src="youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+    
+  <!-- STEP 5: Footer Legal Bar -->
+<div class="footer-legal">
+  <div class="legal-left">
+    © 2026 Proving Grounds. All rights reserved.
+  </div>
+
+  <div class="legal-center">
+    <a href="/privacy-policy">Privacy Policy</a>
+    <span class="divider">|</span>
+    <a href="/terms-of-service">Terms of Service</a>
+  </div>
+
+  <div class="legal-right">
+    Developed by <a href="https://hotseatticketing.com" target="_blank">Hot Seat Ticketing</a>
+  </div>
+</div>
+
+</footer>
+
+
+
 </body>
 </html>
+
 
