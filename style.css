@@ -321,8 +321,10 @@ body {
 /* STEP 7: Footer Base Styles */
 .footer {
   background-color: #ffffff;
-  padding: 200px 60px 10px;
+  padding: 40px 60px 0px;
+  margin-top: 150px;
   color: #000;
+  border-top: 1px solid #ddd;
 }
 
 /* STEP 8: Main Grid Layout */
@@ -380,6 +382,7 @@ body {
     width: 48%;
     margin: auto;
     flex-wrap: wrap;
+
 }
 /*.footer-logo img {
     width: 180px;  
@@ -392,6 +395,7 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 12px;
+    margin-top: 15px;
     
 }
 .social-icons {
@@ -432,8 +436,9 @@ body {
 
 /* STEP 16: Legal Footer Bar */
 .footer-legal {
-  margin-top: 120px;
-  padding-top: 30px;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-top: 1px solid #ddd;
 
   display: flex;
@@ -441,6 +446,7 @@ body {
   align-items: center;
 
   font-size: 14px;
+  min-height: 50px;
 }
 
 /* STEP 17: Legal Links */
@@ -489,22 +495,41 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .nav-links a {
+  .nav-links {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    gap: 15px;
     display: none;
+    align-items: center;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
   }
 
   .menu-toggle {
     display: flex;
     position: absolute;
-    right: 30%; /* moves hamburger */
+    right: 10%; /* moves hamburger */
     top: 50%;
     transform: translateY(-50%);
     z-index: 200;
-  }
-
-  /* Ensure the nav menu appears under the nav bar */
-  .nav-links {
-    top: 90px; /* space under the fixed nav */
   }
 }
 
@@ -659,6 +684,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     max-width: none;
+    margin-top: 20px;
   }
 
   .footer-container {

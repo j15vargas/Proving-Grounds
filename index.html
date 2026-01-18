@@ -193,7 +193,7 @@
         <script>
             // ===== HAMBURGER MENU TOGGLE =====
             const menuToggle = document.querySelector('.menu-toggle');
-            const navMenu = document.querySelector('.main-nav');
+            const navMenu = document.querySelector('.nav-links');
 
             menuToggle.addEventListener('click', () => {
                 menuToggle.classList.toggle('active');
@@ -201,7 +201,7 @@
             });
 
             // ===== CLOSE MENU WHEN LINK CLICKED (on mobile) =====
-            document.querySelectorAll('.main-nav a').forEach(link => {
+            document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
                     menuToggle.classList.remove('active');
                     navMenu.classList.remove('open');
