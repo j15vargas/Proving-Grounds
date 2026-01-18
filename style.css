@@ -5,10 +5,16 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+}
+
 body {
   font-family: "Playfair Display", serif;
   background: #fff;
   color: #000;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* NAV */
@@ -50,6 +56,38 @@ body {
   opacity: 0.85;
 }
 
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
 .nav-links a:hover {
   opacity: 2;
 }
@@ -73,6 +111,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: none;
 }
 
 .hero-image {
@@ -452,19 +492,233 @@ body {
   .nav-links a {
     display: none;
   }
-}
-@media (max-width: 768px) {
-  .hero-image {
-    object-position: center top;
+
+  .menu-toggle {
+    display: flex;
   }
 }
+
 @media (max-width: 768px) {
+  /* Navigation */
+  .nav {
+    padding: 0px 8px;
+  }
+
+  .nav-logo {
+    height: 60px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .cta {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-image {
+    object-position: 20% 10%;
+  }
+
   .hero-content {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     align-items: center;
     text-align: center;
-    padding: 0 1.5rem;
-    padding-top: 25vh;
+    padding: 0 1rem;
+    padding-top: 15vh;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+  }
+
+  .hero-content .hero-sub {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content .hero-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  /* Info Section */
+  .info {
+    padding: 2rem 1rem;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .info h1 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  .info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+
+  /* Training Header */
+  .training-header {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .training-header h1 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+
+  .training-header p {
+    font-size: 14px;
+  }
+
+  /* Training Levels */
+  .training-levels {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .training-levels h2 {
+    font-size: 16px;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  /* Level Recommend */
+  .level-recommend {
+    padding: 0;
+    padding-top: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  .level-recommend h1 {
+    font-size: 22px;
+    padding: 3rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+  }
+
+  .level-recommend h2 {
+    font-size: 15px;
+    padding: 0 1rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .level-recommend button {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .level-recommend p {
+    font-size: 13px;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .level-recommend img {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: none;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-location {
+    text-align: center;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 28px;
+    white-space: normal;
+    margin-bottom: 1rem;
+  }
+
+  .footer-tagline {
+    font-size: 13px;
+    max-width: 100%;
+    padding-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-location h3,
+  .footer-contact h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .footer-location p,
+  .footer-contact p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .footer-logo {
+    height: 50px;
+    margin: 2rem auto 0;
+    display: block;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    font-size: 11px;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .legal-left,
+  .legal-center,
+  .legal-right {
+    width: 100%;
+  }
+
+  .divider {
+    margin: 0 4px;
   }
 }
