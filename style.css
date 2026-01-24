@@ -106,6 +106,7 @@ body {
   filter: invert(1);
 }
 
+
 /* HAMBURGER MENU */
 .menu-toggle {
   display: none;
@@ -127,6 +128,10 @@ body {
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
   z-index: auto;
+}
+
+.nav2 .menu-toggle .bar {
+  background-color: #000;
 }
 
 .menu-toggle.active .bar:nth-child(1) {
@@ -990,29 +995,36 @@ body {
 @media (max-width: 768px) {
 
   /* ABOUT SECTION */
+  .about-section {
+    padding: 1rem 1rem 2rem;
+    text-align: center;
+  }
   .about-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 1rem;
+    /*padding: 2rem 1rem;*/
     text-align: center;
   }
 
   .about-who h1 {
     font-size: 28px;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   .about-who h2 {
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .about-who p {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .about-image img {
