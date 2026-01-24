@@ -375,16 +375,16 @@ body {
 }
 /* -------------------------------- ABOUT ---------------------------------- */
 .about-section {
-    padding: 80px 0px;
+    padding: 80px 0px 10px;
 }
 
 .about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 5rem auto;
     flex-wrap: wrap;
 }
 
@@ -399,19 +399,59 @@ body {
 }
 
 .about-image img {
-    width: 100%;
+    
     max-width: 500px;
-    height: auto;
+    height: 350px;
 }
 
-.about-why {
+/*.about-why {
     margin-top: 10px;
     padding: 0 40px;
-    /*xt-align: center;*/
-}
+    /*xt-align: center;
+}*/
 
 .about-why h2 {
     margin-bottom: 16px;
+}
+
+.about-qualify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.about-qualify p {
+    margin: 1rem 0;
+    width: 400px;
+}
+
+.about-qualify h4 {
+    margin-bottom: 1rem;
+}
+
+.about-qualify ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.about-qualify h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-qualify button {
+  display: block;
+  margin: 0 auto;
+  color: #000;
+}
+
+.about-qualify img {
+    width: 500px;
 }
 
 /* ----------------------------------- SERVICES ------------------------------------ */
