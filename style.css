@@ -790,6 +790,32 @@ body {
     border-bottom: none;
   }
 
+  /* Second Nav */
+    .nav-links2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 1500;
+  }
+
+  .nav-links2.open {
+    display: flex;
+  }
+
+  .nav-links2 a,
+  .nav-links2 button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
   .menu-toggle {
     display: flex;
     visibility: visible;
@@ -960,8 +986,252 @@ body {
   }
 }
 
+/* ====================MOBILE RESPONSIVE ABOUT SECTION================== */
+@media (max-width: 768px) {
 
-/* STEP 15: Responsive (Mobile) */
+  /* ABOUT SECTION */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .about-who h1 {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-who h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .about-who p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* QUALIFY SECTION */
+  .about-qualify {
+    display: flex;
+    flex-direction: column-reverse; /* image below text */
+    gap: 2rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+
+  .about-qualify h2 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .about-qualify h1 {
+    font-size: 26px;
+    margin-top: 2rem;
+  }
+
+  .about-qualify p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .about-qualify ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .about-qualify li {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-qualify img {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* CTA BUTTON */
+  .cta-qualify {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+}
+
+/* ========================= SERVICES — MOBILE VIEW ========================= */
+@media (max-width: 768px) {
+
+  /* ---------- HEADER ---------- */
+  .service-header {
+    padding: 6rem 1rem 2rem;
+    text-align: center;
+  }
+
+  .service-header h1 {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-header h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .service-header p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ---------- SERVICE GRID ---------- */
+  .service-section {
+    padding: 2rem 1rem;
+  }
+
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  /* ---------- SERVICE CARDS ---------- */
+  .service-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .service-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-subtitle {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-intro {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .service-card h4 {
+    font-size: 15px;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .service-card ul {
+    list-style-position: outside;
+    padding-left: 2.5rem;
+    text-align: left; 
+  }
+
+  .service-card li {
+    margin-bottom: 0.4rem;
+  }
+
+  .service-outcome {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  /* ---------- CLOSING LINE ---------- */
+  .service-closing {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.6;
+  }
+
+  /* ---------- PROCESS SECTION ---------- */
+  .service-process {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .service-process h1 {
+    font-size: 22px;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-process h4 {
+    font-size: 15px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-process p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .service-process ul {
+    list-style-position: outside;
+    padding-left: 2.5rem;
+    text-align: left; 
+  }
+
+  /* ---------- NEXT STEP ---------- */
+  .next-step {
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+
+  .next-step h1 {
+    font-size: 24px;
+    margin-bottom: 0.75rem;
+  }
+
+  .next-step p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+
+/* ----------------------FOOTER: Responsive (Mobile)-------------------- */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
