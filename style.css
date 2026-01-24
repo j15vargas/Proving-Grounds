@@ -33,6 +33,21 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.nav2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
 .nav.scrolled {
   background-color: rgba(0, 0, 0, 0.85);
 }
@@ -61,6 +76,34 @@ body {
   text-decoration: none;
   font-size: 15px;
   opacity: 0.85;
+}
+
+.nav-links a:hover {
+  opacity: 2;
+}
+
+.nav-links2 {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links2 a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.nav-links2 a:hover {
+  opacity: 2;
+}
+
+.nav-logo2 {
+  height: 80px;       /* adjust as needed */
+  width: auto;
+  display: block;
+  filter: invert(1);
 }
 
 /* HAMBURGER MENU */
@@ -99,9 +142,7 @@ body {
 }
 
 
-.nav-links a:hover {
-  opacity: 2;
-}
+
 
 .cta {
   margin-left: 12px;
@@ -263,6 +304,7 @@ body {
     justify-content: center;
     color: #fff;
     padding-top: 40px;
+    padding: 80px;
 }
 
 .level-recommend h1,
@@ -331,7 +373,192 @@ body {
     inset 0 2px 5px rgba(0, 0, 0, 0.5),
     0 2px 4px rgba(0, 0, 0, 0.3);
 }
+/* -------------------------------- ABOUT ---------------------------------- */
+.about-section {
+    padding: 80px 0px;
+}
 
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-who h2 {
+    margin-bottom: 16px;
+}
+
+.about-who {
+    flex: 1;
+    text-align: justify;
+    max-width: 600px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.about-why {
+    margin-top: 10px;
+    padding: 0 40px;
+    /*xt-align: center;*/
+}
+
+.about-why h2 {
+    margin-bottom: 16px;
+}
+
+/* ----------------------------------- SERVICES ------------------------------------ */
+.service-header {
+  padding-top: 8%;
+  padding-left: 4%;;
+}
+
+.service-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.service-header p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.service-section {
+  padding: 6rem 4rem;
+  background: #ffffff;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  margin-bottom: 2.5rem;
+}
+
+.service-title {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.service-subtitle {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.service-intro {
+  margin-bottom: 1.5rem;
+}
+
+.service-card p {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.service-card h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card li {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.service-outcome {
+  margin-top: 2%;
+  padding-top: 1.5rem;
+}
+
+.service-closing {
+  margin-top: 2rem;
+  font-size: x-large;
+  font-weight: 600;
+  text-align: center;
+}
+
+.service-process {
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+  padding-bottom: 3rem;
+}
+
+.service-process h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-process h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-process p {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.service-process ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-process li {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.next-step {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+/* -------------------------------- FOOTER STYLES ---------------------------------- */
 /* STEP 7: Footer Base Styles */
 .footer {
   background-color: #ffffff;
@@ -681,6 +908,18 @@ body {
     padding-top: 3.5rem;
   }
 }
+
+/* RESPONSIVE SERVICES */
+@media (max-width: 1024px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-image {
+    height: 360px;
+  }
+}
+
 
 /* STEP 15: Responsive (Mobile) */
 @media (max-width: 768px) {
