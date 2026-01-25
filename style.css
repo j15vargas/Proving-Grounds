@@ -276,10 +276,23 @@ body {
 
 .info {
     max-width: 100%;
-    margin: 0 auto 2.5rem 0.5rem;
+    margin: 2rem auto 2.5rem 0.5rem;
     text-align: left;
     padding: 0 0.5rem;
     line-height: 2rem;
+}
+
+.info h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+}
+
+.info p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0.5rem 0;
+    text-align: justify;
 }
 
 .training-header {
@@ -393,14 +406,19 @@ body {
     flex-wrap: wrap;
 }
 
+.about-who {
+    flex: 1;
+    max-width: 600px;
+}
+
 .about-who h2 {
     margin-bottom: 16px;
 }
 
-.about-who {
-    flex: 1;
+.about-who p {
+    margin: 1rem 0;
+    line-height: 1.7;
     text-align: justify;
-    max-width: 600px;
 }
 
 .about-image img {
@@ -408,12 +426,6 @@ body {
     max-width: 500px;
     height: 350px;
 }
-
-/*.about-why {
-    margin-top: 10px;
-    padding: 0 40px;
-    /*xt-align: center;
-}*/
 
 .about-why h2 {
     margin-bottom: 16px;
@@ -431,6 +443,7 @@ body {
 .about-qualify p {
     margin: 1rem 0;
     width: 400px;
+    text-align: justify;
 }
 
 .about-qualify h4 {
@@ -476,6 +489,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .service-section {
@@ -525,7 +539,7 @@ body {
 
 .service-card p {
   font-family: "Inter", sans-serif;
-  text-align: center;
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1.25rem;
@@ -583,6 +597,7 @@ body {
   padding-bottom: 1.25rem;
   line-height: 1.7;
   margin-bottom: 1.25rem;
+  text-align: justify;
 }
 
 .service-process ul {
@@ -748,7 +763,7 @@ body {
   color: #000;
 }
 
-/* RESPONSIVE */
+/* ================== RESPONSIVE MOBILE VIEW =================== */
 @media (max-width: 768px) {
   .nav {
     padding: 0px 8px;
@@ -905,6 +920,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     margin: 0.5rem 0;
+    text-align: justify;
   }
 
   /* Training Header */
@@ -1024,7 +1040,7 @@ body {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: justify;
   }
 
   .about-image img {
@@ -1058,6 +1074,8 @@ body {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 1rem;
+    padding: 0 2.5rem;
+    text-align: justify;
   }
 
   .about-qualify ul {
@@ -1094,7 +1112,7 @@ body {
 
   /* ---------- HEADER ---------- */
   .service-header {
-    padding: 6rem 1rem 2rem;
+    padding: 6rem 2rem 2rem 2rem;
     text-align: center;
   }
 
@@ -1112,6 +1130,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 0.75rem;
+    text-align: justify;
   }
 
   /* ---------- SERVICE GRID ---------- */
@@ -1160,7 +1179,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 0.75rem;
-    text-align: center;
+    text-align: justify;
   }
 
   .service-card h4 {
@@ -1189,7 +1208,7 @@ body {
   /* ---------- CLOSING LINE ---------- */
   .service-closing {
     font-size: 14px;
-    text-align: center;
+    text-align: justify;
     margin-top: 2rem;
     line-height: 1.6;
   }
@@ -1239,6 +1258,7 @@ body {
   .next-step p {
     font-size: 14px;
     line-height: 1.6;
+    text-align: justify;
   }
 }
 
