@@ -729,8 +729,7 @@ body {
   width: 180px;
   height: auto;
 
-  /* 🔥 Invert logo colors */
- /* filter: invert(100%);*/
+ /* filter: invert(100%);*/  /* 🔥 Invert logo colors */
 }
 
 /* STEP 16: Legal Footer Bar */
@@ -1271,7 +1270,7 @@ body {
     gap: 40px;
     width: 100%;
     gap: 30px;
-    text-align: center;
+    text-align: left;
   }
   
 
@@ -1297,19 +1296,19 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 30px;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-brand {
-    text-align: center;
+    text-align: left;
   }
 
   .footer-location {
-    text-align: center;
+    text-align: left;
   }
 
   .footer-contact {
-    text-align: center;
+    text-align: left;
   }
 
   .footer-title {
@@ -1342,10 +1341,10 @@ body {
   .footer-social {
     color: black;
     text-decoration: underline;
-    padding-top: 25px;
+    padding-top: 0;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 2rem;
     text-align: center;
   }
 
@@ -1363,7 +1362,8 @@ body {
     align-items: center;
   }
   .footer-logo {
-    height: 100px;
+    height: 12rem;
+    width: auto;
     margin: 2rem auto 0;
   }
 
