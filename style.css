@@ -727,9 +727,10 @@ body {
 /* STEP 14: Logo Styling */
 .footer-logo {
   width: 180px;
+  height: auto;
 
   /* 🔥 Invert logo colors */
-  filter: invert(100%);
+ /* filter: invert(100%);*/
 }
 
 /* STEP 16: Legal Footer Bar */
