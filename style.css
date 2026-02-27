@@ -161,15 +161,21 @@ body {
 }
 
 /* HERO */
-.hero {
-  position: relative;
-  height: 130vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: none;
+.hero { 
+  position: relative; 
+  height: 100vh; 
+  overflow: hidden; 
+} 
+
+.hero-video { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  transform: translate(-50%, -50%); 
+  z-index: -2; 
 }
 
 .hero,
@@ -178,43 +184,61 @@ body {
 }
 
 
-.hero-image {
+/*.hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   /* 👇 THIS is what you’ll tweak */
-  object-position: 0% 10%; /* 👈 adjust vertical position */
-  /*transform: scale(1.55); /* 👈 zoom level */
+  /*object-position: 0% 10%;*/ /* 👈 adjust vertical position */
+  /*transform: scale(1.55); /* 👈 zoom level
+}*/
+
+.overlay { 
+  position: absolute; 
+  top: 0; left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.45); /* darken video */ 
+  z-index: -1; 
+} 
+
+.hero-content { 
+  position: relative; 
+  z-index: 2; 
+  color: white; 
+  text-align: center; 
+  align-items: center;
+  padding: 20%; 
 }
 
 
 
 /* Dark cinematic overlay */
-.overlay {
+/*.overlay {
   position: absolute;
   inset: 0;
-}
+}*/
 
 /* HERO CONTENT */
-.hero-content {
+/*.hero-content {
   position: relative;
   z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 560px;   /* tighter column */
-  margin-left: 6rem;
+  max-width: 560px;*/   /* tighter column */
+  /*margin-left: 6rem;
   padding-top: 10vh;
   color: white;
   pointer-events: auto;
-}
+}*/
 
 /* Normalize vertical rhythm */
-.hero-content > * {
+/*.hero-content > * {
   margin: 0;
-}
+}*/
 
 /* Heading */
 .hero-content h1 {
